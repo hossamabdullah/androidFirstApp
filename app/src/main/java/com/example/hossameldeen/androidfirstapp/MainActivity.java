@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final TextView message = (TextView) findViewById(R.id.textView3);
-        Button[] buttons = new Button[9];
+        Button[] buttons = new Button[11];
         final Button button1= (Button) findViewById(R.id.button1);  buttons[0]=button1;
         final Button button2= (Button) findViewById(R.id.button2);  buttons[1]=button2;
         final Button button3= (Button) findViewById(R.id.button3);  buttons[2]=button3;
@@ -43,17 +43,16 @@ public class MainActivity extends AppCompatActivity {
                 String equation = message.getText().toString();
                 int plusIndex = equation.indexOf('+');
                 if(plusIndex == -1){
-                    String[] parameters = equation.split("/-");
-                    int a = Integer.parseInt(parameters[0]);
-                    int b = Integer.parseInt(parameters[1]);
+                    int minusIndex = equation.indexOf('-');
+                    int a = Integer.parseInt(equation.substring(0, minusIndex));
+                    int b = Integer.parseInt(equation.substring(minusIndex+1));
                     int result = a - b;
-                    message.setText(result);
+                    message.setText(result+"");
                 }else{
-                    String[] parameters = equation.split("/+");
-                    int a = Integer.parseInt(parameters[0]);
-                    int b = Integer.parseInt(parameters[1]);
+                    int a = Integer.parseInt(equation.substring(0, plusIndex));
+                    int b = Integer.parseInt(equation.substring(plusIndex+1));
                     int result = a + b;
-                    message.setText(result);
+                    message.setText(result+"");
                 }
 
             }

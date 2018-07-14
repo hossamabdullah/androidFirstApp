@@ -7,109 +7,203 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView3"
+    <HorizontalScrollView
+        style="@style/ScrollViewDisplay"
+        android:id="@+id/scv_display"
         android:layout_width="match_parent"
-        android:layout_height="79dp"
+        android:layout_height="72dp"
+        android:layout_toRightOf="@+id/imb_delete"
+        android:layout_toEndOf="@+id/imb_delete"
+        >
+
+        <TextView
+            style="@style/TextViewDisplay"
+            android:id="@+id/lbl_display"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            android:layout_gravity="end"
+            tools:text="985+600"
+            />
+
+    </HorizontalScrollView>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
-        android:hint="Result." />
+        >
+        <Button
+            style="@style/ButtonNumberPad"
+            android:id="@+id/btn_number_seven"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="7"
+            />
 
-    <TableLayout
+        <Button
+            style="@style/ButtonNumberPad"
+            android:id="@+id/btn_number_eight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="8"
+            />
+
+        <Button
+            style="@style/ButtonNumberPad"
+            android:id="@+id/btn_number_nine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="9"
+            />
+
+        <Button
+            style="@style/ButtonOperation"
+            android:id="@+id/btn_operator_divide"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="/"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <Button
+            style="@style/ButtonNumberPad"
+            android:id="@+id/btn_number_four"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="4"
+            />
 
-            <Button
-                android:id="@+id/button1"
-                android:layout_width="207dp"
-                android:layout_height="wrap_content"
-                android:text="1" />
+        <Button
+            style="@style/ButtonNumberPad"
+            android:id="@+id/btn_number_five"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="5"
+            />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="212dp"
-                android:layout_height="wrap_content"
-                android:text="2" />
+        <Button
+            style="@style/ButtonNumberPad"
+            android:id="@+id/btn_number_six"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="6"
+            />
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="174dp"
-                android:layout_height="wrap_content"
-                android:text="3" />
-        </TableRow>
+        <Button
+            style="@style/ButtonOperation"
+            android:id="@+id/btn_operator_multiply"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="*"
+            />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4" />
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
 
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="6" />
-        </TableRow>
+        <Button
+            style="@style/ButtonNumberPad"
+            android:id="@+id/btn_number_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="1"
+            />
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+        <Button
+            style="@style/ButtonNumberPad"
+            android:id="@+id/btn_number_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="2"
+            />
 
-            <Button
-                android:id="@+id/button7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7" />
+        <Button
+            style="@style/ButtonNumberPad"
+            android:id="@+id/btn_number_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="3"
+            />
 
-            <Button
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="8" />
+        <Button
+            style="@style/ButtonOperation"
+            android:id="@+id/btn_operator_subtract"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="-"
+            />
 
-            <Button
-                android:id="@+id/button9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="9" />
-        </TableRow>
+    </LinearLayout>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
 
-            <Button
-                android:id="@+id/buttonplus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+" />
+        <Button
+            style="@style/ButtonNumberPad"
+            android:id="@+id/btn_number_zero"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="0"
+            />
 
-            <Button
-                android:id="@+id/buttonminus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-" />
+        <Button
+            style="@style/ButtonNumberPad"
+            android:id="@+id/btn_decimal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="."
+            />
 
-            <Button
-                android:id="@+id/buttonequal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="=" />
-        </TableRow>
-    </TableLayout>
+        <Button
+            style="@style/ButtonNumberPad"
+            android:id="@+id/btn_evaluate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="="
+            />
 
+        <Button
+            style="@style/ButtonOperation"
+            android:id="@+id/btn_operator_add"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="+"
+            />
+
+    </LinearLayout>
 </LinearLayout>
